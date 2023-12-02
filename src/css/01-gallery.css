@@ -41,6 +41,6 @@
   cursor: zoom-in;
 }
 
-li {
+.gallery__item {
   list-style: none;
 }
