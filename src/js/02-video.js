@@ -12,7 +12,7 @@ player.on('play', function() {
 
 
 player.on('timeupdate',throttle( function ({seconds}) {
-
+ 
     console.log('Current time:', seconds);
     localStorage.setItem("videoplayer-current-time", JSON.stringify(seconds))
     }, 1000)
@@ -24,7 +24,7 @@ const cachedDataTime = JSON.parse(localStorage.getItem("videoplayer-current-time
 if (typeof cachedDataTime === 'number') {
     player.setCurrentTime(cachedDataTime).then(function(seconds) {
         console.log('Successfully set current time to:', seconds);
-
+        
     })
     .catch (function(error) {
         switch (error.name) {
